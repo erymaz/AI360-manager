@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../Geogentia/geogentia-api" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../Geogentia/geogentia-identity" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../Geogentia/geogentia-lens" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../Geogentia/lens-dev" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../tree-trim-be" vcs="Git" />
+  </component>
+</project>

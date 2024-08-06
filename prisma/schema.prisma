@@ -1,0 +1,767 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model organizations {
+  id                      String   @id @db.VarChar(100)
+  name                    String?  @db.VarChar(100)
+  industry_id             String?  @db.VarChar(100)
+  country_id              String?  @db.VarChar(100)
+  locale_id               String?  @db.VarChar(100)
+  created_at              DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  waipify_organization_id String?  @db.VarChar(100)
+  creator_id              String?  @db.VarChar(100)
+  is_superadmin           Boolean? @default(false)
+  is_supervisor           Boolean? @default(false)
+
+  @@map("360organizations")
+}
+
+model ai_industry_standards_to_provider {
+  id                   String    @db.VarChar(100)
+  provider_id          String    @db.VarChar(100)
+  industry_standard_id String    @db.VarChar(100)
+  updated_date         DateTime? @db.Timestamp(0)
+
+  @@id([id, provider_id, industry_standard_id])
+}
+
+model capabilities {
+  id          String   @id @db.VarChar(100)
+  model_id    String?  @db.VarChar(100)
+  name        String?  @db.VarChar(100)
+  description String?  @db.Text
+  created_at  DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model capability_to_model {
+  id                      String   @id @db.VarChar(100)
+  model_id                String?  @db.VarChar(100)
+  capability_id           String?  @db.VarChar(100)
+  description             String?  @db.Text
+  created_at              DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  organization_creator_id String?  @db.VarChar(100)
+  has_user_friendly_ui    Boolean?
+  has_apis                Boolean?
+  has_grpc                Boolean?
+  has_extension           Boolean?
+}
+
+model cases_to_industry {
+  id          String   @id @db.VarChar(100)
+  case_id     String?  @db.VarChar(100)
+  industry_id String?  @db.VarChar(100)
+  created_at  DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model cases {
+  id                      String   @id @db.VarChar(100)
+  name                    String   @db.VarChar(500)
+  country_id              String?  @db.VarChar(100)
+  region_id               Int?
+  created_at              DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  organization_creator_id String?  @db.VarChar(100)
+  description             String?  @db.Text
+  original_id             String?  @db.VarChar(100)
+  industry_id             String?  @db.VarChar(100)
+  industry_category_id    String?  @db.VarChar(100)
+  business_area_id        String?  @db.VarChar(100)
+  opportunity_to_case     opportunity_to_case[]
+}
+
+model departments {
+  id         String   @id @db.VarChar(100)
+  name       String?  @db.VarChar(100)
+  filial_id  String?  @db.VarChar(100)
+  created_at DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model entries {
+  id                        String              @id @db.VarChar(100)
+  reference                 String?              @db.VarChar(100)
+  name                      String?             @db.VarChar(100)
+  case_id                   String?             @db.VarChar(100)
+  subcase_id                String?             @db.VarChar(100)
+  provider_id               String?             @db.VarChar(100)
+  task_id                   String?             @db.VarChar(100)
+  locale_id                 String?             @db.VarChar(100)
+  winner_solution_id        String?             @db.VarChar(100)
+  planned                   String?             @db.VarChar(100)
+  department_id             String?             @db.VarChar(100)
+  status_id                 String?             @db.VarChar(100)
+  author_id                 String?             @db.VarChar(100)
+  report_id                 String?             @db.VarChar(100)
+  objective_id              String?             @db.VarChar(100)
+  business_impact           Float?              @db.Float
+  feasibility_number        Float?              @db.Float
+  is_draft                  Boolean?
+  winner_solution_is_active Boolean?            @default(false)
+  winner_solution_is_custom Boolean?            @default(false)
+  created_at                DateTime            @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  use_case_key              String?             @db.VarChar(100)
+  subcase_key               String?             @db.VarChar(100)
+  task_key                  String?             @db.VarChar(100)
+  creator_organization_id   String?             @db.VarChar(100)
+  time_to_impact            String?             @db.VarChar(100)
+  assessment                String?             @db.VarChar(1000)
+  goal                      String?             @db.VarChar(100)
+  is_winner                 Boolean?            @default(false)
+  business_area             business_areas?     @relation(fields: [business_area_id], references: [id])
+  business_area_id          String?             @db.VarChar(100)
+  opportunity               opportunities?      @relation(fields: [opportunity_id], references: [id])
+  opportunity_id            String?             @db.VarChar(100)
+  industry                  industries?         @relation(fields: [industry_id], references: [id])
+  industry_id               String?             @db.VarChar(100)
+  industry_category         industry_categories? @relation(fields: [industry_category_id], references: [id])
+  industry_category_id      String?             @db.VarChar(100)
+  original_id               String?             @db.VarChar(100)
+  ai_generated              Boolean             @default(false)
+}
+
+model business_impact_baseline {
+  id                       String   @id @db.VarChar(100)
+  baseline_value           String?  @db.VarChar(100)
+  comparison_period        String?  @db.VarChar(100)
+  task_to_metric_id        String?  @db.VarChar(100)
+  after_ai_value           String?  @db.VarChar(100)
+  entry_business_impact_id String?  @db.VarChar(100)
+  created_at               DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model business_impact {
+  id                         String   @id @db.VarChar(100)
+  entry_id                   String?  @db.VarChar(100)
+  created_at                 DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  repeats_yearly             String?  @db.VarChar(50)
+  time_per_outcomes          String?  @db.VarChar(50)
+  time_per_outcomes_after_ai String?  @db.VarChar(50)
+  reduced_process_time_from  String?  @db.VarChar(50)
+  reduced_process_time_to    String?  @db.VarChar(50)
+  employee_hourly_rate       String?  @db.VarChar(50)
+  total_cost_yearly          String?  @db.VarChar(50)
+  total_cost_yearly_after_ai String?  @db.VarChar(50)
+  can_perform_other_tasks    Boolean? @default(false)
+  has_high_replacement_cost  Boolean? @default(false)
+  has_direct_impact          Boolean? @default(false)
+  open_new_revenue_stream    Boolean? @default(false)
+  revenue_increase_with_ai   String?  @db.VarChar(50)
+  comments                   String?  @db.VarChar(200)
+  is_not_quantifiable        Boolean?
+  estimated_value            String?  @db.VarChar(50)
+  strategic_value            String?  @db.VarChar(50)
+}
+
+model entry_metric_values {
+  id                  String   @id @db.VarChar(100)
+  entry_id            String?  @db.VarChar(100)
+  value_difference    String?  @db.VarChar(100)
+  type                String?  @db.VarChar(100)
+  created_at          DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  logic_comment       String?  @db.VarChar(100)
+  is_not_quantifiable Boolean?
+}
+
+model entry_to_initiatives {
+  id            String   @id @db.VarChar(100)
+  entry_id      String?  @db.VarChar(100)
+  initiative_id String?  @db.VarChar(100)
+  created_at    DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model entry_to_objectives {
+  id           String   @id @db.VarChar(100)
+  entry_id     String?  @db.VarChar(100)
+  objective_id String?  @db.VarChar(100)
+  created_at   DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model feasibility_criteria {
+  id                    String   @id @db.VarChar(100)
+  name                  String?  @db.VarChar(100)
+  weight_multiplicative Float?   @db.Float
+  created_at            DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  organization_id       String?  @map("360organization_id") @db.VarChar(100)
+}
+
+model filials {
+  id              String    @id @db.VarChar(100)
+  organization_id String?   @map("360organization_id") @db.VarChar(100)
+  name            String?   @db.VarChar(100)
+  address         String?   @db.VarChar(100)
+  address_number  String?   @db.VarChar(100)
+  zip_code        String?   @db.VarChar(100)
+  country_id      String?   @db.VarChar(100)
+  deletable       Boolean?  @default(false)
+  updated_at      DateTime? @db.Timestamp(0)
+}
+
+model industries {
+  id                       String        @id @db.VarChar(100)
+  name                     String?       @db.VarChar(100)
+  created_at               DateTime      @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  industry_categories                    industry_categories[]
+  entries                                entries[]
+  business_areas                         business_areas[]
+}
+
+model sources_of_information {
+  id                      String                @id @db.VarChar(100)
+  name                    String?               @db.VarChar(100)
+  created_at              DateTime              @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  url                     String?               @db.VarChar(256)
+  industry_categories     industry_categories[]
+  job_titles              job_titles[]
+  tasks                   tasks[]
+  job_subtasks            job_subtasks[]
+}
+
+model industry_categories {
+  id                          String                        @id @db.VarChar(100)
+  name                        String?                       @db.VarChar(100)
+  created_at                  DateTime                      @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  source                      sources_of_information?       @relation(fields: [source_id], references: [id])
+  source_id                   String?                       @db.VarChar(100)
+  jobTitles                   job_titles[]
+  industry                    industries                    @relation(fields: [industry_id], references: [id])
+  industry_id                 String                       
+  products_and_services       String?                       @db.Text
+  ai_generated                Boolean?                      @default(true)
+  entries                     entries[]
+  business_areas              business_areas[]
+}
+
+model job_titles {
+  id                    String                  @id @db.VarChar(100)
+  name                  String?                 @db.VarChar(100)
+  created_at            DateTime                @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  industry_category     industry_categories     @relation(fields: [industry_category_id], references: [id])
+  industry_category_id  String
+  source                sources_of_information  @relation(fields: [source_id], references: [id])
+  source_id             String
+  cross_industry        Boolean                 @default(false)
+  job_title_to_job_task job_title_to_job_task[]
+}
+
+model job_subtasks {
+  id         String                 @id @db.VarChar(100)
+  name       String?                @db.VarChar(100)
+  created_at DateTime               @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  source     sources_of_information @relation(fields: [source_id], references: [id])
+  source_id  String
+  job_task   tasks                  @relation(fields: [task_id], references: [id])
+  task_id    String
+}
+
+// Many-to-many relation table
+model job_title_to_job_task {
+  id           String     @id @db.VarChar(100)
+  created_at   DateTime   @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  job_title    job_titles @relation(fields: [job_title_id], references: [id])
+  job_title_id String
+  job_task     tasks      @relation(fields: [task_id], references: [id])
+  task_id      String
+}
+
+model industry_standards {
+  id               String    @id @db.VarChar(100)
+  name             String?   @db.VarChar(100)
+  institution_name String?   @db.VarChar(100)
+  url              String?   @db.VarChar(100)
+  history_version  String?   @db.VarChar(100)
+  updated_date     DateTime? @db.Timestamp(0)
+  type             String?   @db.VarChar(100)
+}
+
+model initiatives {
+  id              String    @id @db.VarChar(100)
+  name            String?   @db.VarChar(100)
+  business_impact String?   @db.VarChar(100)
+  created_at      DateTime  @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  start_time      DateTime? @db.Timestamp(0)
+  end_time        DateTime? @db.Timestamp(0)
+  period          String?   @db.VarChar(100)
+  objective_id    String?   @db.VarChar(100)
+  filial_id       String?   @db.VarChar(100)
+}
+
+model locale {
+  id         String    @id @db.VarChar(100)
+  name       String?   @db.VarChar(100)
+  created_at DateTime  @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+}
+
+model metric_to_metric_units {
+  id             String   @id @db.VarChar(100)
+  metric_id      String?  @db.VarChar(100)
+  metric_unit_id String?  @db.VarChar(100)
+  created_at     DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model metric_units {
+  id          String   @id @db.VarChar(100)
+  name        String?  @db.VarChar(100)
+  metric_unit String?  @db.VarChar(100)
+  created_at  DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  country_id  String?  @db.VarChar(100)
+}
+
+model metrics {
+  id                 String   @id @db.VarChar(100)
+  name               String?  @db.VarChar(100)
+  organization_id    String?  @map("360organization_id") @db.VarChar(100)
+  created_at         DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  is_business_impact Boolean?
+}
+
+model models {
+  id                      String   @id @db.VarChar(100)
+  name                    String?  @db.VarChar(100)
+  provider_id             String?  @db.VarChar(100)
+  description             String?  @db.Text
+  created_at              DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  organization_creator_id String?  @db.VarChar(100)
+  documentation_url       String?  @db.VarChar(2048)
+  features                String?
+  benefits                String?
+  main_capability_name    String?  @db.VarChar(100)
+  has_text_generation     Boolean?
+  has_function_calling    Boolean?
+  has_embeddings          Boolean?
+  has_fine_tunnings       Boolean?
+  has_image_generation    Boolean?
+  has_vision              Boolean?
+  has_text_to_speech      Boolean?
+  has_speech_to_text      Boolean?
+  has_moderation          Boolean?
+  version                 String?  @db.VarChar(100)
+}
+
+model organization_objectives {
+  id              String    @id @db.VarChar(100)
+  name            String?   @db.VarChar(100)
+  business_impact String?   @db.VarChar(100)
+  created_at      DateTime  @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  start_time      DateTime? @db.Timestamp(0)
+  end_time        DateTime? @db.Timestamp(0)
+  period          String?   @db.VarChar(100)
+  organization_id String?   @map("360organization_id") @db.VarChar(100)
+  filial_id       String?   @db.VarChar(100)
+}
+
+model providers {
+  id                          String   @id @db.VarChar(100)
+  name                        String?  @db.VarChar(100)
+  logo                        String?  @db.VarChar(1000)
+  type                        String?  @db.VarChar(100)
+  is_internal                 Boolean?
+  description                 String?  @db.VarChar(800)
+  headquarters_city_id        String?  @db.VarChar(100)
+  headquarters_country_id     String?  @db.VarChar(100)
+  headquarters_address_line   String?  @db.VarChar(100)
+  headquarters_address_number String?  @db.VarChar(100)
+  headquarters_zip_code       String?  @db.VarChar(100)
+  created_at                  DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  organzation_creator_id      String?  @db.VarChar(100)
+}
+
+model rai_audits_to_provider {
+  id                  String    @db.VarChar(100)
+  provider_id         String    @db.VarChar(100)
+  rai_crtification_id String    @db.VarChar(100)
+  validity_date       DateTime? @db.Timestamp(0)
+  auditing_entity     String?   @db.VarChar(100)
+
+  @@id([id, provider_id, rai_crtification_id])
+}
+
+model rai_certifications {
+  id                String  @id @db.VarChar(100)
+  name              String? @db.VarChar(100)
+  instituation_name String? @db.VarChar(100)
+  type              Int?
+}
+
+model rai_practices {
+  id           String    @db.VarChar(100)
+  provider_id  String    @db.VarChar(100)
+  name         String?   @db.VarChar(100)
+  type         String?   @db.VarChar(100)
+  updated_date DateTime? @db.Timestamp(0)
+  created_at   DateTime  @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  url          String?   @db.VarChar(100)
+
+  @@id([id, provider_id])
+}
+
+model report_changes {
+  id         String   @id @db.VarChar(100)
+  user_id    String?  @db.VarChar(100)
+  created_at DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model report_to_currency {
+  id         String    @id @db.VarChar(100)
+  name       String?   @db.VarChar(100)
+  created_at DateTime  @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+}
+
+model report_to_locale {
+  id         String    @id @db.VarChar(100)
+  name       String?   @db.VarChar(100)
+  created_at DateTime  @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+}
+
+model report_updates {
+  id         String   @id @db.VarChar(100)
+  user_id    String?  @db.VarChar(100)
+  created_at DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model reports {
+  id                    String    @id @db.VarChar(100)
+  name                  String?   @db.VarChar(100)
+  preview_url           String?   @db.VarChar(100)
+  slug                  String?   @db.VarChar(100)
+  organization_id       String?   @map("360organization_id") @db.VarChar(100)
+  filial_id             String?   @db.VarChar(100)
+  time_zone             DateTime? @db.Timestamp(0)
+  default_currency_code String?   @db.VarChar(100)
+  default_locale        String?   @db.VarChar(100)
+  user_id               String?   @db.VarChar(100)
+}
+
+model reviews {
+  id                       String   @id @db.VarChar(100)
+  solution_id              String?  @db.VarChar(100)
+  feasibility_criteria_id  String?  @db.VarChar(100)
+  score                    Float?   @db.Float
+  comment                  String?  @db.VarChar(4000)
+  author_id                String?  @db.VarChar(100)
+  reviewer_organization_id String?  @db.VarChar(100)
+  created_at               DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  model_id                 String?  @db.VarChar(100)
+}
+
+model solution_to_industries {
+  id          String   @db.VarChar(100)
+  solution_id String   @db.VarChar(100)
+  industry_id String   @db.VarChar(100)
+  created_at  DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+
+  @@id([id, solution_id, industry_id])
+}
+
+model solution_to_model {
+  id          String   @db.VarChar(100)
+  solution_id String   @db.VarChar(100)
+  model_id    String   @db.VarChar(100)
+  created_at  DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+
+  @@id([id, solution_id, model_id])
+}
+
+model solutions {
+  id                        String   @id @db.VarChar(100)
+  name                      String?  @db.VarChar(100)
+  provider_id               String?  @db.VarChar(100)
+  description               String?  @db.Text
+  created_at                DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  organization_creator_id   String?  @db.VarChar(100)
+  documentation_url         String?  @db.VarChar(2048)
+  features                  String?
+  benefits                  String?
+  has_api                   Boolean?
+  has_user_friendly_ui      Boolean?
+  has_grpc                  Boolean?
+  has_extension             Boolean?
+  is_platform               Boolean?
+  has_incumbent_integration Boolean?
+  is_available              Boolean? @default(false)
+  model_id                  String?  @db.VarChar(100)
+  version                   String?  @db.VarChar(100)
+  ai_generated              Boolean  @default(false)
+  logo_url                  String?  @db.VarChar(255)
+  is_url_valid              Boolean  @default(false)
+}
+
+model statuses {
+  id               String   @id @db.VarChar(100)
+  name             String?  @db.VarChar(100)
+  created_at       DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  hex_colour_value String?  @db.VarChar(100)
+  organization_id  String?  @map("360organization_id") @db.VarChar(100)
+}
+
+model subcases {
+  id                      String  @id @db.VarChar(100)
+  case_id                 String? @db.VarChar(100)
+  name                    String? @db.VarChar(100)
+  description             String? @db.Text
+  organization_creator_id String? @db.VarChar(100)
+  country_id              String? @db.VarChar(100)
+  region_id               Int?
+  author_id               String? @db.VarChar(100)
+  original_id             String? @db.VarChar(100)
+}
+
+model supervisions {
+  id            String   @id @db.VarChar(100)
+  supervisor_id String?  @db.VarChar(100)
+  supervised_id String?  @db.VarChar(100)
+  created_at    DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model task_to_metrics {
+  id         String   @id @db.VarChar(100)
+  task_id    String?  @db.VarChar(100)
+  metric_id  String?  @db.VarChar(100)
+  created_at DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model task_to_model {
+  id                      String   @id @db.VarChar(100)
+  task_id                 String?  @db.VarChar(100)
+  entry_id                String?  @db.VarChar(100)
+  model_id                String?  @db.VarChar(100)
+  model_capabilities      String?  @db.VarChar(100)
+  created_at              DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  development_description String?  @db.VarChar(100)
+  suggested               Boolean?
+}
+
+model task_to_model_reviews {
+  id                       String   @id @db.VarChar(100)
+  task_to_model_id         String?  @db.VarChar(100)
+  feasibility_criteria_id  String?  @db.VarChar(100)
+  reviewer_organization_id String?  @db.VarChar(100)
+  entry_id                 String?  @db.VarChar(100)
+  score                    Float?   @db.Float
+  comment                  String?  @db.VarChar(4000)
+  created_at               DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model task_to_solution {
+  id                 String   @id @db.VarChar(100)
+  task_id            String?  @db.VarChar(100)
+  entry_id           String?  @db.VarChar(100)
+  solution_id        String?  @db.VarChar(100)
+  feasibility_number String?  @db.VarChar(100)
+  created_at         DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  needs_allocation   Boolean? @default(false)
+  impact_starts      String?
+  suggested          Boolean?
+}
+
+model task_to_solution_reviews {
+  id                       String   @id @db.VarChar(100)
+  task_to_solution_id      String?  @db.VarChar(100)
+  feasibility_criteria_id  String?  @db.VarChar(100)
+  reviewer_organization_id String?  @db.VarChar(100)
+  entry_id                 String?  @db.VarChar(100)
+  score                    Decimal  @db.Decimal(5, 1)
+  comment                  String?  @db.VarChar(4000)
+  created_at               DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model tasks {
+  id                      String                  @id @db.VarChar(100)
+  subcase_id              String?                 @db.VarChar(100)
+  name                    String?                 @db.VarChar(500)
+  source                  sources_of_information? @relation(fields: [source_id], references: [id])
+  source_id               String?
+  created_at              DateTime                @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  organization_creator_id String?                 @db.VarChar(100)
+  case_id                 String?                 @db.VarChar(100)
+  description             String?                 @db.Text
+  original_id             String?                 @db.VarChar(100)
+  risk                    String?                 @db.VarChar(100)
+  job_subtasks            job_subtasks[]
+  job_title_to_job_task   job_title_to_job_task[]
+}
+
+model updated_rai_policies {
+  id              String    @id @db.VarChar(100)
+  name            String?   @db.VarChar(100)
+  url             String?   @db.VarChar(100)
+  description     String?   @db.VarChar(100)
+  history_version String?   @db.VarChar(100)
+  file            String?   @db.VarChar(100)
+  updated_date    DateTime? @db.Timestamp(0)
+  created_at      DateTime  @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model country {
+  id           String    @id @db.VarChar(100)
+  de           String    @db.VarChar(100)
+  es           String?   @db.VarChar(100)
+  en           String?   @db.VarChar(100)
+  flag         String?   @db.VarChar(100)
+  iso2         String?   @db.VarChar(100)
+  iso3         String?   @db.VarChar(100)
+  updated_date DateTime? @db.Timestamp(0)
+  created_at   DateTime  @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model period {
+  id           String    @id @db.VarChar(100)
+  name         String    @db.VarChar(100)
+  updated_date DateTime? @db.Timestamp(0)
+  created_at   DateTime  @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model business_areas {
+  id                        String                @id @db.VarChar(100)
+  name                      String                @db.VarChar(100)
+  organization_creator_id   String                @db.VarChar(100)
+  description               String?               @db.Text
+  industry                  industries?           @relation(fields: [industry_id], references: [id])
+  industry_id               String?               @db.VarChar(100)
+  industry_category         industry_categories?  @relation(fields: [industry_category_id], references: [id])
+  industry_category_id      String?               @db.VarChar(100)
+  created_at                DateTime              @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  entries                   entries[]
+}
+
+model opportunities {
+  id                        String          @id @db.VarChar(100)
+  name                      String          @db.VarChar(500)
+  country_id                String?         @db.VarChar(100)
+  region_id                 String?         @db.VarChar(100)
+  organization_creator_id   String          @db.VarChar(100)
+  description               String?         @db.Text
+  created_at                DateTime        @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  opportunity_to_case       opportunity_to_case[]
+  entries                   entries[]
+}
+
+model opportunity_to_case {
+  id             String        @id @db.VarChar(100)
+  case       cases    @relation(fields: [case_id], references: [id])
+  case_id    String
+  opportunity    opportunities @relation(fields: [opportunity_id], references: [id])
+  opportunity_id String
+  created_at     DateTime      @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model classifications {
+  id                    String        @id @db.VarChar(100)
+  organization_id       String        @db.VarChar(100)
+  industry_id           String        @db.VarChar(100)
+  industry_category_id  String        @db.VarChar(100)
+  created_at            DateTime      @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model business_areas_to_opportunity {
+  id                    String        @id @db.VarChar(100)
+  opportunity_id        String        @db.VarChar(100)
+  business_area_id      String        @db.VarChar(100)
+  created_at            DateTime      @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model case_to_solution {
+  id                    String        @id @db.VarChar(100)
+  case_id               String        @db.VarChar(100)
+  solution_id           String        @db.VarChar(100)
+  feasibility_number    String?       @db.VarChar(100)
+  impact_starts         String?       @db.VarChar(191)
+  needs_allocation      Boolean       @default(false)
+  suggested             Boolean       @default(false)
+  created_at            DateTime      @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+
+  @@unique([case_id, solution_id])
+}
+
+model case_to_solution_reviews {
+  id                       String   @id @db.VarChar(100)
+  case_to_solution_id      String   @db.VarChar(100)
+  feasibility_criteria_id  String   @db.VarChar(100)
+  reviewer_organization_id String   @db.VarChar(100)
+  score                    Decimal  @db.Decimal(5, 1)
+  comment                  String?  @db.VarChar(4000)
+  created_at               DateTime @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+
+  @@unique([case_to_solution_id, feasibility_criteria_id, reviewer_organization_id])
+}
+
+model trigger_prompts {
+  id                                    String        @id @db.VarChar(100)
+  prompt_name                           String        @db.VarChar(100)
+  user_prompt                           String        @db.Text
+  system_prompt                         String?       @db.Text
+  ai_machine_id                         String        @db.VarChar(100)
+  model                                 String        @db.VarChar(100)
+  is_back_up                            Boolean       @default(false)
+  role                                  String?       @db.VarChar(100)
+  max_tokens                            Int           @default(1)
+  temperature                           Float         @default(0.2)
+  top_p                                 Float         @default(0.9)
+  return_citations                      Boolean       @default(false)
+  return_images                         Boolean       @default(false)
+  top_k                                 Float?        @db.Float
+  stream                                Boolean       @default(false)
+  presence_penalty                      Float?        @db.Float
+  frequency_penalty                     Float?        @db.Float
+  is_used_for_industry_categories       Boolean       @default(false)
+  is_used_for_business_areas            Boolean       @default(false)
+  is_used_for_use_cases                 Boolean       @default(false)
+  is_used_for_business_tasks            Boolean       @default(false)
+  is_used_for_use_cases_kpis_impact     Boolean       @default(false)
+  is_used_for_time_to_impact            Boolean       @default(false)
+  is_used_for_ai_tools                  Boolean       @default(false)
+  is_used_for_ai_models                 Boolean       @default(false)
+  is_used_for_customer_profiling        Boolean       @default(false)
+  is_used_for_alchemist_antiduplication Boolean       @default(false)
+  created_at                            DateTime      @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  completions                           completions[]
+}
+
+model ai_machines {
+  id                String        @id @db.VarChar(100)
+  name              String        @db.VarChar(100)
+  api_url           String        @db.VarChar(500)
+  api_key           String        @db.VarChar(100)
+  created_at        DateTime      @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+  completions       completions[]
+}
+
+model completions {
+  id                      String          @id @db.VarChar(100)
+  trigger_prompt          trigger_prompts @relation(fields: [trigger_prompt_id], references: [id])
+  trigger_prompt_id       String          @db.VarChar(100)
+  ai_machine              ai_machines     @relation(fields: [ai_machine_id], references: [id])
+  ai_machine_id           String          @db.VarChar(100)
+  response                String          @db.Text
+  created_at              DateTime        @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model research_sources {
+  id                      String          @id @db.VarChar(100)
+  case_id                 String          @db.VarChar(100)
+  url                     String          @db.VarChar(500)
+  impact_kpi_id           String?         @db.VarChar(100)
+  created_at              DateTime        @default(dbgenerated("CURRENT_TIMESTAMP")) @db.Timestamp(0)
+}
+
+model impact_kpis {
+  id                        String          @id @db.VarChar(100)
+  name                      String          @db.VarChar(100)
+  description               String?         @db.Text
+  type                      String?          @db.VarChar(100)
+  effect                    String?         @db.VarChar(100)
+  unit                      String?         @db.VarChar(50)
+  expected_impact           String?         @db.VarChar(250)
+  url                       String?         @db.Text
+  ai_generated              Boolean         @default(true)
+  solution_id               String?         @db.VarChar(100)
+  case_id                   String?         @db.VarChar(100)
+  organization_creator_id   String          @db.VarChar(100)
+}

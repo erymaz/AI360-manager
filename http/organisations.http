@@ -1,0 +1,26 @@
+//Create a new organisation
+POST http://localhost:3000/api/organisations HTTP/1.1
+content-type: application/json
+cookie: roq-session-token=<bearer>
+
+{
+    "organisationId": "sapo",
+    "firstName": "John",
+    "lastName": "Doe",
+    "billingInfo": {
+        "billingAddress": {
+        "addressLine1": "123 Main St",
+        "addressLine2": "Apt 4",
+        "city": "Anytown",
+        "state": "NY",
+        "postalCode": "12345",
+        "country": "USA"
+        },
+      "taxId": "123456789"
+    },
+    "companyName": "Example Inc.",
+    "companyWebsite": "https://www.sapo.pt",
+    "phoneNumber": "555-1234",
+    "termsAgreement": true,
+    "marketingConsent": false
+}

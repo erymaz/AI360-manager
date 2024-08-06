@@ -1,0 +1,32 @@
+export const styles = {
+  container: {
+    cursor: "pointer",
+    background: "white",
+    border: "1px solid white",
+    minHeight: "240px",
+    height: "100%",
+    borderRadius: "10px",
+    transition: ".3s all ease-in",
+    "&:hover": { border: "1px solid #d0d0d0", background: "#eff6ff" },
+  },
+  header: { display: "flex", justifyContent: "space-between" },
+  moreVertButton: { margin: "5px 0 0 auto" },
+  moreVert: { color: "#6A7381", cursor: "pointer" },
+  title: {
+    font: "Inter",
+    fontWeight: 500,
+    fontSize: "16px",
+    lineHeight: "24px",
+    margin: "10px 16px 0 16px",
+  },
+  description: {
+    color: "#9CA5AF",
+    font: "Inter",
+    fontWeight: 400,
+    fontSize: "14px",
+    lineHeight: "20px",
+    margin: "6px 16px 0 16px",
+  },
+  badge: { margin: "16px 0 0 10px" },
+  avatar: { margin: "0px 0 0 -5px" },
+};

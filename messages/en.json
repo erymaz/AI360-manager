@@ -1,0 +1,1024 @@
+{
+  "auth": {
+    "accept-invite": {
+      "button": {
+        "name": "Accept Invite"
+      },
+      "sub-title": "Please fill out the details to get started",
+      "submit": {
+        "success": "Invite accepted successfully",
+        "success-cta": "You are now set. This page can now be closed"
+      },
+      "title": "Accept Invite"
+    },
+    "activate-account": {
+      "sub-title": "Account confirmed successfully. This page can now be closed",
+      "title": "Confirm Account"
+    },
+    "confirm-registration": {
+      "did-not-receive-email": "Didn’t received an email?",
+      "resend-email": "Resend Email",
+      "sub-title": "We’ve sent you an email to <span>{{email}}</span>. Click on the link there to continue your registration.",
+      "title": "Confirm your email"
+    },
+    "default-redirect": {
+      "sub-title": "You are seeing this page because you logged in while in preview mode",
+      "title": "Login Success"
+    },
+    "error": {
+      "user-email-already-exists": "User email address already exists",
+      "error-page-message": "It looks like something went wrong on our end. We apologize for the inconvenience. Please try again later.",
+      "invalid-api-key": "Invalid api key",
+      "invalid-auth-header": "Authorization header type is not supported",
+      "invalid-credentials": "Credentials are wrong",
+      "invalid-token": "Provided token is wrong",
+      "missing-auth": "Authorization header is not passed",
+      "redirect-uri-mismatch": "The provided redirect_uri is not in the list of allowed callback URLs.",
+      "title": "Oops! Something went wrong.",
+      "unauthorized": "Unauthorized",
+      "unauthorized-exception": "{{message}}",
+      "user-incorrect-email-password": "The email/password you entered are not correct",
+      "user-not-activated": "User is not activated",
+      "user-not-found": "User with id {{id}} not found",
+      "user-object-not-found": "User not found"
+    },
+    "forget-password": {
+      "button": {
+        "name": "Send"
+      },
+      "link-text": {
+        "login": "Go back to <login>Login</login>"
+      },
+      "sub-title": "Enter your registered email below",
+      "submit": {
+        "success": "Reset password email sent successfully",
+        "success-cta": "You should receive an email if your account exists in our system and is active"
+      },
+      "title": "Reset Password"
+    },
+    "forgot-password-cta": "Forgot password?",
+    "input": {
+      "city": {
+        "name": "City"
+      },
+      "company": {
+        "name": "Organization",
+        "placeholder": "Enter your Organization"
+      },
+      "country": {
+        "name": "Country"
+      },
+      "email": {
+        "name": "Email",
+        "placeholder": "Enter your email",
+        "validation": {
+          "required": "E-Mail is a required field",
+          "type": "Must be a valid E-mail"
+        }
+      },
+      "first-name": {
+        "name": "First Name",
+        "placeholder": "Enter your first name"
+      },
+      "house_number": {
+        "name": "House Number"
+      },
+      "keepMeLoggedIn": "Keep me logged in",
+      "last-name": {
+        "name": "Last Name",
+        "placeholder": "Enter your last name"
+      },
+      "password": {
+        "name": "Password",
+        "placeholder": "Enter your password",
+        "validation": {
+          "char-limit": "Have between 8 and 64 characters",
+          "number-required": "Contain at least 1 number",
+          "required": "Password is a required field",
+          "special-char-required": "Contain at least 1 special character",
+          "strength": "at least one letter, one number and one special character",
+          "upper-char-required": "Contain at least 1 upper-case letter"
+        }
+      },
+      "phone": {
+        "name": "Phone"
+      },
+      "position": {
+        "name": "Position"
+      },
+      "street_address": {
+        "name": "Street Address"
+      },
+      "zip_code": {
+        "name": "Zip Code"
+      }
+    },
+    "link-text": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions"
+    },
+    "login": {
+      "button": {
+        "name": "Sign in"
+      },
+      "link-text": {
+        "register": "Don't have account? <register>Register</register>"
+      },
+      "sub-title": "Please enter your email and password to log in",
+      "title": "Login"
+    },
+    "redirect": {
+      "auto-redirecting": "Redirecting you to login in 5 seconds",
+      "click-to-application-login": "Click <span>here</span> to login",
+      "go-back-application-login": "Go back to the application to login"
+    },
+    "register": {
+      "button": {
+        "name": "Create Account"
+      },
+      "link-text": {
+        "login": "Already have an account? <login>Login</login>",
+        "privacy-link": "By signing up, I agree to the <privacy>Privacy Policy</privacy>",
+        "terms-and-privacy": "By signing up, I agree to the <terms>Terms & Conditions</terms> and <privacy>Privacy Policy</privacy>",
+        "terms-link": "By signing up, I agree to the <terms>Terms and Conditions</terms>"
+      },
+      "or-register-with": {
+        "text": "Or Register with"
+      },
+      "or-sign-in-with": {
+        "text": "Or Sign in with"
+      },
+      "sub-title": "This is your first step with us. Let’s Clerk !",
+      "submit": {
+        "success": "Account created successfully"
+      },
+      "success": {
+        "resend-confirmation-email": "Confirmation email resent successfully"
+      },
+      "title": "Register",
+      "your-password": {
+        "label": "Your password must"
+      }
+    },
+    "reset-password": "Reset Password",
+    "reset-password-subheading": "In order to reset your password, please provide registered email address and follow instructions.",
+    "reset-password": {
+      "button": {
+        "name": "Send"
+      },
+      "submit": {
+        "success": "Password updated successfully",
+        "success-cta": "Your password was reset. This page can now be closed"
+      }
+    },
+    "user-invite": {
+      "button": {
+        "add": {
+          "label": "Invite users"
+        }
+      },
+      "emails": {
+        "validation": {
+          "required": "Emails are a required field"
+        }
+      },
+      "input": {
+        "emails": {
+          "label": "To:",
+          "placeholder": "Email, comma separated"
+        },
+        "roles": {
+          "label": "Invite as",
+          "placeholder": "Member"
+        }
+      },
+      "roles": {
+        "validation": {
+          "required": "Role is a required field"
+        }
+      },
+      "success": {
+        "message": "Invitation sent successfully"
+      }
+    },
+    "user-invites": {
+      "actions": {
+        "invite-users": "Invite Users",
+        "resend": {
+          "confirmation": {
+            "cancel": "Cancel",
+            "confirm": "Resend",
+            "message": "Are you sure you want to resend invitation to the following user",
+            "title": "Resend Invitation"
+          },
+          "title": "Resend Invitation"
+        },
+        "revoke": {
+          "confirmation": {
+            "cancel": "Cancel",
+            "confirm": "Revoke",
+            "message": "Are you sure you want to resend invitation to the following user",
+            "title": "Revoke Invitation"
+          },
+          "title": "Revoke"
+        }
+      },
+      "filter": {
+        "accepted": "Accepted",
+        "all": "All",
+        "canceled": "Cancelled",
+        "expired": "Expired",
+        "pending": "Pending"
+      },
+      "status": {
+        "accepted": "Accepted",
+        "canceled": "Cancelled",
+        "expired": "Expired",
+        "pending": "Pending"
+      },
+      "subTitle": "Invite others to join your workspace",
+      "table": {
+        "columns": {
+          "actions": "Actions",
+          "date": "Date",
+          "email": "Email",
+          "role": "Role",
+          "status": "Status"
+        },
+        "no-data": "No User Invites"
+      },
+      "title": "Invitations"
+    }
+  },
+  "chat": {
+    "chat-message-list-empty-state": {
+      "description": "You have no messages right now"
+    },
+    "conversation-card": {
+      "form": {
+        "input": {
+          "placeholder": "Name"
+        },
+        "title": "Rename group"
+      }
+    },
+    "conversation-header": {
+      "offline": "Offline",
+      "online": "Active now"
+    },
+    "conversation-list-sidebar": {
+      "search": {
+        "placeholder": "Search or start new chat"
+      },
+      "title": "Messages"
+    },
+    "conversation-menu": {
+      "archive": "Archive Group",
+      "invite": "Add Group Participants",
+      "leave": "Leave Group",
+      "markRead": "Mark as read",
+      "markUnread": "Mark as unread",
+      "remove": "Remove Group Participants",
+      "rename": "Rename group"
+    },
+    "conversation-not-selected-panel": {
+      "description": "You have no messages right now."
+    },
+    "create-conversation-sidebar": {
+      "search": {
+        "placeholder": "Search or start new chat"
+      },
+      "title": "New Chat"
+    },
+    "create-group-button": {
+      "label": "New Group"
+    },
+    "create-group-sidebar": {
+      "search": {
+        "placeholder": "Search member to add to the group"
+      },
+      "title": "New Group"
+    },
+    "error": {
+      "conversation-not-found": "Conversation with id {{id}} not found",
+      "conversation-user-not-found": "ConversationUser with id {{id}} not found",
+      "message-not-found": "Message with id {{id}} not found",
+      "message-status-not-found": "MessageStatus with id {{id}} not found"
+    },
+    "forward-message-sidebar": {
+      "title": "Forward Message"
+    },
+    "group": {
+      "title": "New group"
+    },
+    "invite-group-members-sidebar": {
+      "search": {
+        "placeholder": "Search member"
+      },
+      "title": "Add Group Participants"
+    },
+    "message-deleted-status": {
+      "label": "Message Deleted"
+    },
+    "message-file-drop": {
+      "message": "Drag File Here"
+    },
+    "message-forwarded-status": {
+      "label": "Forwarded"
+    },
+    "message-input": {
+      "placeholder": "Type your message here..."
+    },
+    "message-menu": {
+      "delete": "Delete Message",
+      "edit": "Edit Message",
+      "forward": "Forward message",
+      "reply": "Reply Message"
+    },
+    "message-updated-status": {
+      "label": "Edited"
+    },
+    "one-to-one": {
+      "title": "Chat"
+    },
+    "remove-group-members-sidebar": {
+      "title": "Remove Group Participants"
+    },
+    "typing-indicator": {
+      "multiple-users-typing": "Multiple Users are Typing...",
+      "single-user": {
+        "typing": "{{user}} is Typing..."
+      }
+    },
+    "update-group-members-sidebar": {
+      "search": {
+        "placeholder": "Search member"
+      },
+      "title": "Remove Group Participants"
+    }
+  },
+  "common": {
+    "error": {
+      "event-subscriber-not-found": "EventSubscriber with id {{id}} not found",
+      "event-type-not-found": "EventType with id {{id}} not found",
+      "graphql-parse-failed": "Parse error",
+      "graphql-validation-failed": "Invalid Input",
+      "internal-server-error": "Internal server error",
+      "invalid-uuid": "Provided argument should have been a valid uuid",
+      "unique-constraint-violated": "This request is invalid as it violates an unique constraint",
+      "ws-validation-failed": "Validation Failed"
+    },
+    "modal": {
+      "cancel": "Cancel",
+      "confirm": "Confirm"
+    }
+  },
+  "files": {
+    "error": {
+      "file-association-not-found": "FileAssociation with id {{id}} not found",
+      "file-category-content-type-not-found": "FileCategoryContentType with id {{id}} not found",
+      "file-category-not-found": "FileCategory with id {{id}} not found",
+      "file-category-with-given-key-not-found": "FileCategory with key {{fileCategory}} not found",
+      "file-not-completely-uploaded-status-update-failed": "Can't set the status {{status}} for file that is not completely uploaded",
+      "file-not-found": "File with id {{id}} not found",
+      "file-status-update-failed": "Can't set the status '{{status}}' for already uploaded file",
+      "invalid-content-type-for-file-category": "File type {{extension}} is not a valid file type for {{fileCategoryName}}"
+    },
+    "file-active-uploads": {
+      "title": "Active Uploads"
+    },
+    "file-change-visibility-private-confirmation": {
+      "button": "Make Private",
+      "message": "Are you sure you want to make the following file private?",
+      "title": "Make File Private"
+    },
+    "file-change-visibility-public-confirmation": {
+      "button": "Make Public",
+      "message": "Are you sure you want to make the following file public?",
+      "title": "Make File Public"
+    },
+    "file-delete-modal": {
+      "cancel": "Cancel",
+      "confirm": "Delete",
+      "message": "Are you sure you want to delete the following file?",
+      "title": "Delete File"
+    },
+    "file-edit-form": {
+      "action": {
+        "copy-url": "Copy URL",
+        "make-private": "Make Private",
+        "make-public": "Make Public"
+      },
+      "label": {
+        "extension": "Extension",
+        "name": "Name"
+      }
+    },
+    "file-edit-modal": {
+      "cancel": "Cancel",
+      "confirm": "Save",
+      "title": "Editing File"
+    },
+    "file-status": {
+      "upload-cancelled": "Upload Cancelled",
+      "upload-failed": "Upload Failed",
+      "uploaded-successfully": "Uploaded Successfully"
+    },
+    "file-upload-button": {
+      "label": "Upload File"
+    },
+    "file-upload": {
+      "message": "Drag Files here or use the",
+      "message-cta": "Upload File",
+      "message-suffix": "Button",
+      "title": "Files"
+    }
+  },
+  "notifications": {
+    "error": {
+      "notification-not-found": "Notification with id {{id}} not found",
+      "notification-type-channel-not-found": "NotificationTypeChannel with id {{id}} not found",
+      "notification-type-not-found": "NotificationType with id {{id}} not found",
+      "notification-user-not-found": "NotificationUser with id {{id}} not found"
+    },
+    "notification-list-empty-state": {
+      "description": "You have no notifications right now"
+    },
+    "notification-menu-button": {
+      "mark-as-read": "Mark as read",
+      "mark-as-unread": "Mark as unread"
+    },
+    "notification-preference-channel-type": {
+      "type": {
+        "email": {
+          "description": "E-mail"
+        },
+        "external_chat": {
+          "description": "External Chat"
+        },
+        "in_app": {
+          "description": "In-App"
+        },
+        "push": {
+          "description": "Push"
+        },
+        "sms": {
+          "description": "SMS"
+        }
+      }
+    },
+    "notification-preference-list-empty-state": {
+      "description": "You have no notification notifications preferences right now"
+    },
+    "notification-type-tabs": {
+      "tab": {
+        "all": "All",
+        "unread": "Unread"
+      }
+    },
+    "notifications-panel": {
+      "title": "Notifications"
+    },
+    "notifications-preferences-panel": {
+      "title": "Notifications Preferences"
+    }
+  },
+  "waipify": {
+    "ui": {
+      "You": "You",
+      "To": "To",
+      "Goal": "Goal",
+      "Scenario": "Scenario",
+      "account_settings": {
+        "account_settings": "Account Settings",
+        "address1": "Address line 1",
+        "address2": "Address line 2",
+        "address": "Primary business address",
+        "admin_email": "Admin email",
+        "admin_first_name": "Admin first name",
+        "admin_last_name": "Admin last name",
+        "billing_settings": "Billing Settings",
+        "city": "City",
+        "company_name": "Company name",
+        "country": "Country",
+        "delete_organisation": "Delete organisation",
+        "delete_organisation_confirmation_text": "Are you sure you want to delete the account? No one from your organization will be able to generate quality content on wAIpify any more. The history of generations will be lost",
+        "departments": "Departments",
+        "divisions": "Divisions",
+        "divisions_branches": "Divisions/branches",
+        "industry": "Company industry",
+        "industry": {
+          "accounting": "Accounting",
+          "administration_office_support": "Administration & Office Support",
+          "advertising_arts_media": "Advertising, Arts & Media",
+          "banking_financial_services": "Banking & Financial Services",
+          "call_centre_customer_service": "Call Centre & Customer Service",
+          "community_services_development": "Community Services & Development",
+          "construction": "Construction",
+          "consulting_strategy": "Consulting & Strategy",
+          "design_architechture": "Design & Architechture",
+          "education_training": "Education & Training",
+          "engineering": "Engineering",
+          "farming_animals_conservation": "Farming, Animals & Conservation",
+          "government_defence": "Government & Defence",
+          "healthcare_medical": "Healthcare & Medical",
+          "hospitality_tourism": "Hospitality & Tourism",
+          "human_resources_recruitment": "Human Resources & Recruitment",
+          "information_communication_technology": "Information & Communication Technology",
+          "insurance": "Insurance",
+          "legal": "Legal",
+          "manufacturing_transport_logistics": "Manufacturing, Transport & Logistics",
+          "marketing_communications": "Marketing & Communications",
+          "mining_resources_energy": "Mining, Resources & Energy",
+          "other": "Other",
+          "real_estate_property": "Real Estate & Property",
+          "retail_consumer_products": "Retail & Consumer Products",
+          "sales": "Sales",
+          "science_technology": "Science & Technology",
+          "sport_recreation": "Sport & Recreation",
+          "trades_services": "Trades & Services"
+        },
+        "invitations": "Invitations",
+        "members": "Organization / Members",
+        "not_valid": "not valid",
+        "one_of": "should be one from the dropdown",
+        "organisation_details": "Organisation details",
+        "organisation_divisions": "Your organization divisions/branches",
+        "organization": "Organization",
+        "please_use_desktop_version": "For account management, Invite team members, and billing please use the desktop version",
+        "postal_code": "Postal code",
+        "required": "required",
+        "save": "Save",
+        "state": "State",
+        "successfully_updated": "Account settings successfully updated",
+        "tax_id": "If you are business tax registrant, please enter your business tax ID here",
+        "usage": {
+          "current_usage": "Current Usage",
+          "limit": "Trial subscription limit",
+          "on_current_billing_cycle": "The current usage so far this billing cycle",
+          "on_trial": "The current usage so far during trial period",
+          "usage": "Usage"
+        },
+        "user": "User",
+        "user_settings": "User Settings",
+        "website": "Company's main website"
+      },
+      "add-generator": {
+        "automatically-customized": "You will be able to generate high-quality content with the most advanced AI technologies immediately",
+        "select-workspace": "Select Workspace",
+        "title": "Add the selected AI-Generators into my workspace"
+      },
+      "ai-generators": {
+        "add_to_workspace": "Add to Workspace!",
+        "header": "Generate personalized product descriptions, translations, convert text to video, enhance images, and more to delight your customers and bring cost-savings to your company!",
+        "title": "AI-Generators Store",
+        "use-it-now": "Use it Now!"
+      },
+      "auth": {
+        "link-text": {
+          "imprint": "Imprint",
+          "privacy": "Privacy Policy",
+          "terms": "Terms & Conditions"
+        }
+      },
+      "bikes": {
+        "description": "Generate a production description for bikes.",
+        "form": {
+          "age_range": {
+            "label": "Age range"
+          },
+          "brand": {
+            "label": "Brand"
+          },
+          "color": {
+            "label": "Color"
+          },
+          "material": {
+            "label": "Material"
+          },
+          "purchase_price": {
+            "label": "Purchase price"
+          },
+          "weight": {
+            "label": "Weight"
+          }
+        },
+        "title": "Bikes Generator"
+      },
+      "blocked_page": {
+        "message_for_admin": "Please, contact support for more details",
+        "message_for_user": "Please, contact your administrator for more details",
+        "title": "Your organisation is deactivated"
+      },
+      "general": {
+        "activate_subscription": "Activate your subscription",
+        "activate_subscription_after_trial": "Activate your subscription and keep using",
+        "add_and_customize": "Add the selected AI-Generators into my WorkSpace",
+        "add_generator": "Add AI-Generator",
+        "add_generator_to_workspace": "Add AI-Generator into my WorkSpace",
+        "add_new_generator": "Add New AI-Generator",
+        "add_to_my_workspace": "Add to my WorkSpace",
+        "ai-generators": "AI-Generators",
+        "cancel": "Cancel",
+        "click_to_browse": "or, click to browse (8 MB max)",
+        "copy": "Copy",
+        "create_workspace": "Create New Workspace",
+        "delete": "Delete",
+        "delete_generator": "Are you sure about deleting the selected AI Generator?",
+        "delete_workspace_confirmation_text": "Are you sure you want to delete the workspace? Your team will not be able to use the generators there and the history of generation will not be accessible",
+        "delete_workspace_title": "Delete workspace",
+        "dislike_result": "Dislike Result",
+        "drag_image": "Drag image here",
+        "edit": "Edit",
+        "failed_loading_workspace": "Failed to load workspace",
+        "finish": "Finish",
+        "from": "From",
+        "generate": "Generate",
+        "generating_text": "Generating text",
+        "generating_video": "Generating video",
+        "generation_price": "per use, added to your organization's monthly consume",
+        "generator_exists": "Generator is already added to the workspace",
+        "generator_not_added": "Generator is not added to the workspace",
+        "generator_popularity": {
+          "heading": "Popularity",
+          "high": "High",
+          "low": "Low",
+          "medium": "Medium"
+        },
+        "image_64": "JPEG, PNG / Up to 5MB / 64x64px",
+        "like_result": "Like Result",
+        "next": "Next",
+        "per-use": "per use",
+        "remove": "Remove",
+        "request_ai_service" : "Request AI Services",
+        "save": "Save",
+        "search": "Search",
+        "search1": "Search",
+        "settings": "Settings",
+        "something_went_wrong": "Something went wrong",
+        "status": "Status",
+        "submit": "Submit",
+        "subscription_expired_member": "Contact your organisation's owner to keep using!",
+        "take_couple_minutes": "This can take up a few seconds for text generation. (10 to 20 seconds). For media formats up to a few minutes. It's worth it!",
+        "to": "To",
+        "trial_ended": "Your free trial ended!",
+        "trial_generation_price": "This AI generation is free",
+        "upload_logo": "Upload Logo",
+        "validation_failed": "Validation failed",
+        "workspace": "Workspace",
+        "workspace_name": "Workspace name",
+        "workspace_settings": {
+          "add_empty_error": "Fail to add empty option to workspace user",
+          "add_failed": "Failed adding member",
+          "added": "Member added to workspace",
+          "delete_failed": "Failed deleting member",
+          "deleted": "Member deleted from workspace",
+          "fail_inviting": "Fail inviting user",
+          "has_alredy_invited": "Member has already invited",
+          "role_changed": "User role changed",
+          "user_invited": "User invited to organisation",
+          "workspace_settings": "Workspace settings"
+        }
+      },
+      "generators": {
+        "common": {
+          "product_description": {
+            "label": "Product Description",
+            "placeholder": "wAIpify makes it super easy and fast for you to compose high-performing landing pages, product descriptions, ads, and blog posts in seconds."
+          },
+          "translations": {
+            "label": "Translation languages",
+            "options": {
+              "de": "German",
+              "en-US": "English",
+              "es": "Spanish"
+            }
+          }
+        }
+      },
+      "history": {
+        "generated": "Generated",
+        "header": {
+          "content_type": "Content type",
+          "date_generated": "Date generated",
+          "generated_by": "Generated by",
+          "title": "Title"
+        },
+        "title": "AI-Generation History"
+      },
+      "location": {
+        "description": "Generate a customized location description for your Real Estate Property, your rental apartment, your office business description.",
+        "form": {
+          "address": {
+            "label": "Property address"
+          },
+          "airport_range": {
+            "label": "Main Airport (km)"
+          },
+          "arts_culture": {
+            "label": "Arts & Culture (km)"
+          },
+          "bus_range": {
+            "label": "Bus - Show in description within this range (km)"
+          },
+          "dont_show_exact_address": {
+            "label": "Don't show exact address"
+          },
+          "embeddable_google_link": {
+            "label": "Provide me embeddable Google link with the map and location"
+          },
+          "food_restaurant": {
+            "label": "Food and Restaurants (km)"
+          },
+          "hospitals_medical": {
+            "label": "Hospitals & Medical (km)"
+          },
+          "hotels": {
+            "label": "Hotels (km)"
+          },
+          "metro_range": {
+            "label": "Metro - Show in description within this range (km)"
+          },
+          "parks_green_areas": {
+            "label": "Parks & Green Areas (km)"
+          },
+          "places_interests": {
+            "label": "Places and Interests"
+          },
+          "poi_list_only": {
+            "label": "Provide me a result that provides this information only as a list"
+          },
+          "public_transportation": {
+            "label": "Public transportation"
+          },
+          "schools": {
+            "label": "Schools (km)"
+          },
+          "staying": {
+            "label": "Staying"
+          },
+          "supermarkets": {
+            "label": "Supermarkets (km)"
+          },
+          "train_range": {
+            "label": "Main train station (km)"
+          },
+          "translations": {
+            "label": "Translation languages"
+          }
+        },
+        "title": "Location Description"
+      },
+      "name_report": {
+        "name_first_report": "Name your first report",
+        "name_required": "Report name is required"
+      },
+      "name_workspace": {
+        "change_name": "You can change the name and add more workspaces at any time",
+        "congrats": "Congrats!",
+        "header": "Our AI will make your work much simpler by providing you high-quality industry-tailored content, generated in seconds",
+        "name_first_workspace": "Name your first workspace",
+        "name_required": "Workspace name is required"
+      },
+      "navbar": {
+        "admin360": "360 Admin",
+        "ai-library": "AI-Generators Store",
+        "ai-manager360": "AIManager360",
+        "locale": {
+          "options": {
+            "de": "German",
+            "en": "English"
+          }
+        },
+        "logout": "Logout",
+        "manage_account": "Manage account",
+        "my-manager360": "Manager360",
+        "my-workspaces": "My Workspaces"
+      },
+      "neutral_video": {
+        "description": "Generate slides with a talking avatar to present any product based on a description.",
+        "title": "Text-to-Video Generator for Any Product"
+      },
+      "onboarding": {
+        "access_all_generators": "Access all our AI-generators",
+        "create_first_report_free": "Create a first report for free",
+        "free_test_requests": "5 free test requests",
+        "free_trial": "Free Trial",
+        "invite_team": "Easily invite your team",
+        "no_credit_card": "No credit card needed"
+      },
+      "outcome": {
+        "complete_all_settings": "Please complete at least the fields marked with asterisc in the form to the left and then click \"Generate\"",
+        "text_not_generated": "The text has not yet been generated.",
+        "video_not_generated": "The video has not yet been generated.",
+        "outcome-box": "Outcome box"
+      },
+      "pending": {
+        "invite_only": "Invite-only mode",
+        "thank_you": "Thank you for your interest in wAIpify! At the moment we are in invite-only mode. A member of our team will reach out to you to support with enabling your access to our features."
+      },
+      "real-estate-expose": {
+        "description": "Generate an Expose according to your style and patters and using your own CRM fields.",
+        "form": {
+          "adaptation": {
+            "label": "Real estate company adaptation"
+          },
+          "address": {
+            "label": "Property address"
+          },
+          "apartment_floor": {
+            "label": "Floor of the apartment"
+          },
+          "dont_show_exact_address": {
+            "label": "Don't show exact address"
+          },
+          "energy_certificate": {
+            "label": "Energy certificate"
+          },
+          "energy_certificate_validity_till": {
+            "label": "Validity till"
+          },
+          "energy_efficiency_class": {
+            "label": "Energy efficiency class"
+          },
+          "essential_energy_source": {
+            "label": "Essential energy source"
+          },
+          "final_energy_consumption": {
+            "label": "Final energy consumption"
+          },
+          "furniture": {
+            "label": "Furniture"
+          },
+          "garden_size": {
+            "label": "Garden size"
+          },
+          "has_basement": {
+            "label": "Has Basement"
+          },
+          "has_hallway": {
+            "label": "Has hallway"
+          },
+          "has_high_ceilings": {
+            "label": "Has high ceilings"
+          },
+          "has_monument_protection": {
+            "label": "It's has Monument Protection"
+          },
+          "has_swimming_pool": {
+            "label": "Has swimming pool"
+          },
+          "heating_type": {
+            "label": "Heating type"
+          },
+          "highlights": {
+            "label": "Highlights"
+          },
+          "kitchen_style": {
+            "label": "Kitchen style"
+          },
+          "kitchen_type": {
+            "label": "Kitchen type"
+          },
+          "living_room_areas": {
+            "label": "Living room areas"
+          },
+          "living_room_style": {
+            "label": "Living room style"
+          },
+          "number_balconies": {
+            "label": "Balconys"
+          },
+          "number_bathrooms": {
+            "label": "Bathrooms"
+          },
+          "number_bedrooms": {
+            "label": "Bedrooms"
+          },
+          "number_floors": {
+            "label": "Number of floors in the building"
+          },
+          "number_living_rooms": {
+            "label": "Living rooms"
+          },
+          "number_of_chimneys": {
+            "label": "Number of chimneys"
+          },
+          "number_parking_lots": {
+            "label": "Number of parking lots"
+          },
+          "number_rooms": {
+            "label": "Number of rooms"
+          },
+          "number_terrace": {
+            "label": "Terrace"
+          },
+          "occupation_status": {
+            "label": "Occupation status"
+          },
+          "parking_price": {
+            "label": "Parking Price"
+          },
+          "property_for": {
+            "label": "Property description for"
+          },
+          "property_is_ideal_for": {
+            "label": "It's ideal for"
+          },
+          "property_type": {
+            "label": "Property type"
+          },
+          "purchase_price": {
+            "label": "Purchase Price"
+          },
+          "sq_meter": {
+            "label": "Sq meter"
+          },
+          "storage_mts": {
+            "label": "Storage, mts"
+          },
+          "what_was_renovated": {
+            "label": "What was renovated?"
+          },
+          "year_of_construction": {
+            "label": "Year of construction"
+          },
+          "year_of_construction_according_to_certificate": {
+            "label": "Year of construction according to certificate"
+          },
+          "year_of_renovation": {
+            "label": "Year of renovation"
+          }
+        },
+        "title": "Real Estate Expose"
+      },
+      "real_estate_video": {
+        "description": "Generate slides with a talking avatar to present the real estate.",
+        "title": "Text-to-Video Generator for Real Estate"
+      },
+      "report": {
+        "add_new_record": "Add New Record",
+        "ai_enabled_solution": "AI-enabled solution",
+        "business_function": "Business function",
+        "chart": "Chart",
+        "create_new_report": "Create New Report",
+        "create_report": "Create Report",
+        "department": "Department",
+        "detail": "Detail",
+        "impact": "Impact",
+        "opportunity": "Opportunity",
+        "add_new_opportunity": "Add New Opportunity",
+        "add_more_opportunities": "Add more opportunities",
+        "select_ai_enabled_solution": "Select solution",
+        "select_business_function": "Select business function",
+        "select_department": "Select department",
+        "select_opportunity": "Select opportunity",
+        "select_status": "Select status",
+        "summary": "Summary",
+        "summary_ai_opportunities_found": "AI Opportunities found",
+        "summary_ai_providers_compared": "AI Providers compared",
+        "summary_potential_annual_impact": "Potential annual impact above",
+        "risk_level": "Risk level",
+        "best_ai_tool": "Best AI tool"
+      },
+      "sidebar": {
+        "ai-models": "AI Models",
+        "ai-solutions": "AI Solutions",
+        "dashboard": "Dashboard",
+        "document": "Document",
+        "ecosystem": "Ecosystem",
+        "launcher": "Launcher",
+        "matching": "Matching",
+        "policies": "Policies",
+        "reports": "Reports",
+        "settings": "Settings",
+        "use_case": "Use Case"
+      },
+      "sign_up": {
+        "email": "Email",
+        "email_address": "Email address",
+        "existing_account": "Already have an account?",
+        "sign_in": "Sign In",
+        "sign_up": "Sign Up",
+        "sign_up_email": "Sign up with email",
+        "sign_up_google": "Sign up with Google"
+      },
+      "translations": {
+        "description": "Generate translations into various languages.",
+        "form": {
+          "product_description": {
+            "label": "Product Description"
+          },
+          "translations": {
+            "label": "Translation languages"
+          }
+        },
+        "title": "Translations Generator"
+      },
+      "video": {
+        "video-progress": "Video Rendering in Progress",
+        "video-subtitle": "The rendered video will also be available from the workspace history"
+      }
+    }
+  }
+}

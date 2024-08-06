@@ -1,0 +1,73 @@
+{
+  "functions": {
+    "pages/api/library/generator/*.ts": {
+      "maxDuration": 300
+    }
+  },
+  "crons": [
+    {
+      "path": "/add-generator",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/ai-generators-library",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/auth/none",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/library/generator/none",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/library/schema/none",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/organisations",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/schemas",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/schemas/none",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/users",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/users/invites",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/workspaces",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/workspaces/none",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/workspaces/none/generators",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/create-account",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/workspaces/[workspaceId]",
+      "schedule": "*/5 * * * *"
+    }
+  ]
+}

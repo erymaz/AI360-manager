@@ -1,0 +1,775 @@
+{
+  "auth": {
+    "accept-invite": {
+      "button": {
+        "name": "Einladung annehmen"
+      },
+      "sub-title": "Bitte füllen Sie die Details aus, um zu beginnen",
+      "submit": {
+        "success": "Einladung erfolgreich angenommen",
+        "success-cta": "Sie sind jetzt eingestellt. Diese Seite kann jetzt geschlossen werden"
+      },
+      "title": "Einladung annehmen"
+    },
+    "activate-account": {
+      "sub-title": "Konto erfolgreich bestätigt. Diese Seite kann jetzt geschlossen werden",
+      "title": "Konto bestätigen"
+    },
+    "confirm-registration": {
+      "did-not-receive-email": "Keine E-Mail erhalten?",
+      "resend-email": "E-Mail zurücksenden",
+      "sub-title": "Wir haben Ihnen eine E-Mail an <span>{{email}}</span> gesendet. Klicken Sie dort auf den Link, um mit der Registrierung fortzufahren.",
+      "title": "Bestätige deine E-Mail"
+    },
+    "default-redirect": {
+      "sub-title": "Sie sehen diese Seite, weil Sie sich im Vorschaumodus angemeldet haben",
+      "title": "Erfolgreich eingeloggt"
+    },
+    "error": {
+      "user-email-already-exists": "Benutzer-E-Mail-Adresse existiert bereits",
+      "error-page-message": "Anscheinend ist bei uns etwas schief gelaufen. Wir entschuldigen uns für die Unannehmlichkeiten. Bitte versuchen Sie es später erneut.",
+      "invalid-api-key": "Ungültiger API-Schlüssel",
+      "invalid-auth-header": "Autorisierungskopftyp wird nicht unterstützt",
+      "invalid-credentials": "Anmeldeinformationen sind falsch",
+      "invalid-token": "Angegebenes Token ist falsch",
+      "missing-auth": "Autorisierungsheader wird nicht übergeben",
+      "unauthorized": "Unbefugt",
+      "unauthorized-exception": "{{message}}",
+      "user-incorrect-email-password": "Die eingegebene E-Mail/Passwort ist nicht korrekt",
+      "user-not-activated": "Benutzer ist nicht aktiviert",
+      "user-not-found": "Benutzer mit ID {{id}} nicht gefunden",
+      "user-object-not-found": "Benutzer nicht gefunden"
+    },
+    "forget-password": {
+      "button": {
+        "name": "Senden"
+      },
+      "link-text": {
+        "login": "Gehen Sie zurück zu <login>Anmeldung</login>"
+      },
+      "sub-title": "Geben Sie unten Ihre registrierte E-Mail-Adresse ein",
+      "submit": {
+        "success": "E-Mail zum Zurücksetzen des Passworts erfolgreich gesendet",
+        "success-cta": "Sie sollten eine E-Mail erhalten, wenn Ihr Konto in unserem System existiert und aktiv ist"
+      },
+      "title": "Passwort zurücksetzen"
+    },
+    "forgot-password-cta": "Passwort vergessen?",
+    "input": {
+      "city": {
+        "name": "Stadt"
+      },
+      "company": {
+        "name": "Organization",
+        "placeholder": "Geben Sie Ihr Organization ein"
+      },
+      "country": {
+        "name": "Land"
+      },
+      "email": {
+        "name": "E-Mail",
+        "placeholder": "Geben sie ihre E-Mail Adresse ein",
+        "validation": {
+          "required": "E-Mail ist ein Pflichtfeld",
+          "type": "Muss eine gültige E-Mail sein"
+        }
+      },
+      "first-name": {
+        "name": "Vorname",
+        "placeholder": "Geben Sie Ihren Vornamen ein"
+      },
+      "house_number": {
+        "name": "Hausnummer"
+      },
+      "keepMeLoggedIn": "Eingeloggt bleiben",
+      "last-name": {
+        "name": "Nachname",
+        "placeholder": "Geben Sie Ihren Nachnamen ein"
+      },
+      "password": {
+        "name": "Passwort",
+        "placeholder": "Geben Sie Ihr Passwort ein",
+        "validation": {
+          "char-limit": "Zwischen 8 und 64 Zeichen haben",
+          "number-required": "Mindestens 1 Nummer enthalten",
+          "required": "Passwort ist ein Pflichtfeld",
+          "special-char-required": "Mindestens 1 Sonderzeichen enthalten",
+          "strength": "mindestens ein Buchstabe, eine Zahl und ein Sonderzeichen",
+          "upper-char-required": "Mindestens 1 Großbuchstaben enthalten"
+        }
+      },
+      "phone": {
+        "name": "Telefon"
+      },
+      "position": {
+        "name": "Position"
+      },
+      "street_address": {
+        "name": "Adresse"
+      },
+      "zip_code": {
+        "name": "Postleitzahl"
+      }
+    },
+    "link-text": {
+      "privacy": "Datenschutzerklärung",
+      "terms": "Allgemeine Geschäftsbedingungen"
+    },
+    "login": {
+      "button": {
+        "name": "Anmelden"
+      },
+      "link-text": {
+        "register": "Sie haben kein Konto? <register>Registrieren</register>"
+      },
+      "sub-title": "Bitte geben Sie Ihre E-Mail-Adresse und Ihr Passwort ein, um sich anzumelden",
+      "title": "Anmeldung"
+    },
+    "redirect": {
+      "auto-redirecting": "Sie werden in 5 Sekunden zum Login weitergeleitet",
+      "click-to-application-login": "Klicken Sie <span>hier</span>, um sich anzumelden",
+      "go-back-application-login": "Gehen Sie zurück zur Anwendung, um sich anzumelden"
+    },
+    "register": {
+      "button": {
+        "name": "Benutzerkonto erstellen"
+      },
+      "link-text": {
+        "login": "Sie haben bereits ein Konto? <login>login</Anmeldung>",
+        "privacy-link": "Mit der Anmeldung stimme ich der <privacy>Datenschutzerklärung</privacy> zu",
+        "terms-and-privacy": "Mit der Anmeldung stimme ich den <terms>Allgemeinen Geschäftsbedingungen</terms> und der <privacy>Datenschutzerklärung</privacy> zu",
+        "terms-link": "Mit der Anmeldung stimme ich den <terms>Allgemeinen Geschäftsbedingungen</terms> zu"
+      },
+      "or-register-with": {
+        "text": "Oder Registrieren Sie sich bei"
+      },
+      "or-sign-in-with": {
+        "text": "Oder melden Sie sich mit an"
+      },
+      "sub-title": "Das ist Ihr erster Schritt bei uns. Lassen Sie uns Clerk!",
+      "submit": {
+        "success": "Konto erfolgreich erstellt"
+      },
+      "success": {
+        "resend-confirmation-email": "Bestätigungs-E-Mail erfolgreich erneut gesendet"
+      },
+      "title": "Registrieren",
+      "your-password": {
+        "label": "Ihr Passwort muss"
+      }
+    },
+    "reset-password": "Passwort zurücksetzen",
+    "reset-password-subheading": "Um Ihr Passwort zurückzusetzen, geben Sie bitte Ihre registrierte E-Mail-Adresse ein und folgen Sie den Anweisungen.",
+    "reset-password": {
+      "button": {
+        "name": "Senden"
+      },
+      "submit": {
+        "success": "Passwort erfolgreich aktualisiert",
+        "success-cta": "Ihr Passwort wurde zurückgesetzt. Diese Seite kann jetzt geschlossen werden"
+      }
+    },
+    "user-invite": {
+      "button": {
+        "add": {
+          "label": "Benutzer einladen"
+        }
+      },
+      "emails": {
+        "validation": {
+          "required": "E-Mails sind ein Pflichtfeld"
+        }
+      },
+      "input": {
+        "emails": {
+          "label": "Zu:",
+          "placeholder": "E-Mail, durch Kommas getrennt:"
+        },
+        "roles": {
+          "label": "Einladen als",
+          "placeholder": "Einladen als"
+        }
+      },
+      "roles": {
+        "validation": {
+          "required": "Rolle ist ein Pflichtfeld"
+        }
+      },
+      "success": {
+        "message": "Einladung erfolgreich versendet"
+      }
+    },
+    "user-invites": {
+      "actions": {
+        "resend": {
+          "confirmation": {
+            "cancel": "Absagen",
+            "confirm": "Erneut senden",
+            "message": "Möchten Sie die Einladung wirklich erneut an den folgenden Benutzer senden",
+            "title": "Einladung erneut versenden"
+          },
+          "title": "Einladung erneut versenden"
+        },
+        "revoke": {
+          "confirmation": {
+            "cancel": "Absagen",
+            "confirm": "Widerrufen",
+            "message": "Möchten Sie die Einladung wirklich erneut an den folgenden Benutzer senden",
+            "title": "Einladung widerrufen"
+          },
+          "title": "Widerrufen"
+        }
+      },
+      "filter": {
+        "accepted": "Akzeptiert",
+        "all": "Alle",
+        "canceled": "Abgebrochen",
+        "expired": "Abgelaufen",
+        "pending": "Ausstehend"
+      },
+      "status": {
+        "accepted": "Akzeptiert",
+        "canceled": "Abgebrochen",
+        "expired": "Abgelaufen",
+        "pending": "Ausstehend"
+      },
+      "subTitle": "Lade andere ein",
+      "table": {
+        "columns": {
+          "actions": "Aktionen",
+          "date": "Datum",
+          "email": "Email",
+          "role": "Rolle",
+          "status": "Status"
+        },
+        "no-data": "Keine Benutzereinladungen"
+      },
+      "title": "Einladungen"
+    }
+  },
+  "chat": {
+    "chat-message-list-empty-state": {
+      "description": "Sie haben gerade keine Nachrichten."
+    },
+    "conversation-card": {
+      "form": {
+        "input": {
+          "placeholder": "Name"
+        },
+        "title": "Gruppe umbenennen"
+      }
+    },
+    "conversation-header": {
+      "offline": "Offline",
+      "online": "Jetzt aktiv"
+    },
+    "conversation-list-sidebar": {
+      "search": {
+        "placeholder": "Suchen oder starten Sie einen neuen Chat"
+      },
+      "title": "Mitteilungen"
+    },
+    "conversation-menu": {
+      "archive": "Archivgruppe",
+      "invite": "Gruppenteilnehmer hinzufügen",
+      "leave": "Gruppe verlassen",
+      "markRead": "als gelesen markieren",
+      "markUnread": "als ungelesen markieren",
+      "remove": "Gruppenteilnehmer entfernen",
+      "rename": "Gruppe umbenennen"
+    },
+    "conversation-not-selected-panel": {
+      "description": "Sie haben gerade keine Nachrichten."
+    },
+    "create-conversation-sidebar": {
+      "search": {
+        "placeholder": "Suchen oder starten Sie einen neuen Chat"
+      },
+      "title": "Neuer Chat"
+    },
+    "create-group-button": {
+      "label": "Neue Gruppe"
+    },
+    "create-group-sidebar": {
+      "search": {
+        "placeholder": "Suchen Sie ein Mitglied das der Gruppe hinzugefügt werden soll"
+      },
+      "title": "Neue Gruppe"
+    },
+    "error": {
+      "conversation-not-found": "Konversation mit ID {{id}} nicht gefunden",
+      "conversation-user-not-found": "ConversationUser mit ID {{id}} nicht gefunden",
+      "message-not-found": "Nachricht mit ID {{id}} nicht gefunden",
+      "message-status-not-found": "MessageStatus mit ID {{id}} nicht gefunden"
+    },
+    "forward-message-sidebar": {
+      "title": "Nachricht weiterleiten"
+    },
+    "group": {
+      "title": "Neue Gruppe"
+    },
+    "invite-group-members-sidebar": {
+      "search": {
+        "placeholder": "Mitglied suchen"
+      },
+      "title": "Gruppenteilnehmer hinzufügen"
+    },
+    "message-deleted-status": {
+      "label": "Nachricht gelöscht"
+    },
+    "message-file-drop": {
+      "message": "Datei hierher ziehen"
+    },
+    "message-forwarded-status": {
+      "label": "Weitergeleitet"
+    },
+    "message-input": {
+      "placeholder": "Schreiben Sie ihre Nachricht hier.."
+    },
+    "message-menu": {
+      "delete": "Nachricht löschen",
+      "edit": "Nachricht bearbeiten",
+      "forward": "Nachricht weiterleiten",
+      "reply": "Antwortnachricht"
+    },
+    "message-updated-status": {
+      "label": "Bearbeitet"
+    },
+    "one-to-one": {
+      "title": "Plaudern"
+    },
+    "remove-group-members-sidebar": {
+      "title": "Gruppenteilnehmer entfernen"
+    },
+    "typing-indicator": {
+      "multiple-users-typing": "Mehrere Benutzer schreiben ...",
+      "single-user": {
+        "typing": "{{user}} tippt..."
+      }
+    },
+    "update-group-members-sidebar": {
+      "search": {
+        "placeholder": "Mitglied suchen"
+      },
+      "title": "Gruppenteilnehmer entfernen"
+    }
+  },
+  "common": {
+    "error": {
+      "event-subscriber-not-found": "EventSubscriber mit ID {{id}} nicht gefunden",
+      "event-type-not-found": "EventType mit ID {{id}} nicht gefunden",
+      "graphql-parse-failed": "Parse-Fehler",
+      "graphql-validation-failed": "Ungültige Eingabe",
+      "internal-server-error": "Interner Serverfehler",
+      "invalid-uuid": "Das bereitgestellte Argument hätte eine gültige UUID sein müssen",
+      "unique-constraint-violated": "Diese Anforderung ist ungültig, da sie gegen eine Eindeutigkeitsbeschränkung verstößt",
+      "ws-validation-failed": "Überprüfung fehlgeschlagen"
+    },
+    "modal": {
+      "cancel": "Absagen",
+      "confirm": "Bestätigen"
+    }
+  },
+  "files": {
+    "error": {
+      "file-association-not-found": "FileAssociation mit ID {{id}} nicht gefunden",
+      "file-category-content-type-not-found": "FileCategoryContentType mit ID {{id}} nicht gefunden",
+      "file-category-not-found": "Dateikategorie mit ID {{id}} nicht gefunden",
+      "file-category-with-given-key-not-found": "FileCategory mit Schlüssel {{fileCategory}} nicht gefunden",
+      "file-not-completely-uploaded-status-update-failed": "Der Status {{status}} für eine Datei, die nicht vollständig hochgeladen wurde, kann nicht festgelegt werden",
+      "file-not-found": "Datei mit ID {{id}} nicht gefunden",
+      "file-status-update-failed": "Der Status „{{status}}“ kann für bereits hochgeladene Dateien nicht festgelegt werden",
+      "invalid-content-type-for-file-category": "Dateityp {{extension}} ist kein gültiger Dateityp für {{fileCategoryName}}"
+    },
+    "file-active-uploads": {
+      "title": "Aktive Uploads"
+    },
+    "file-change-visibility-private-confirmation": {
+      "button": "Privatisieren",
+      "message": "Sind Sie sicher, dass Sie die folgende Datei privat machen möchten?",
+      "title": "Datei privat machen"
+    },
+    "file-change-visibility-public-confirmation": {
+      "button": "Veröffentlichen",
+      "message": "Möchten Sie die folgende Datei wirklich öffentlich machen?",
+      "title": "Datei öffentlich machen"
+    },
+    "file-delete-modal": {
+      "cancel": "Stornieren",
+      "confirm": "Löschen",
+      "message": "Möchten Sie die folgende Datei wirklich löschen?",
+      "title": "Datei löschen"
+    },
+    "file-edit-form": {
+      "action": {
+        "copy-url": "URL kopieren",
+        "make-private": "Privatisieren",
+        "make-public": "Veröffentlichen"
+      },
+      "label": {
+        "extension": "Verlängerung",
+        "name": "Name"
+      }
+    },
+    "file-edit-modal": {
+      "cancel": "Stornieren",
+      "confirm": "Speichern",
+      "title": "Datei bearbeiten"
+    },
+    "file-status": {
+      "upload-cancelled": "Hochladen abgebrochen",
+      "upload-failed": "Upload fehlgeschlagen",
+      "uploaded-successfully": "Erfolgreich hochgeladen"
+    },
+    "file-upload-button": {
+      "label": "Datei hochladen"
+    },
+    "file-upload": {
+      "message": "Ziehen Sie Dateien hierher oder verwenden Sie die",
+      "message-cta": "Datei hochladen",
+      "message-suffix": "Taste",
+      "title": "Dateien"
+    }
+  },
+  "notifications": {
+    "error": {
+      "notification-not-found": "Benachrichtigung mit ID {{id}} nicht gefunden",
+      "notification-type-channel-not-found": "NotificationTypeChannel mit ID {{id}} nicht gefunden",
+      "notification-type-not-found": "NotificationType mit ID {{id}} nicht gefunden",
+      "notification-user-not-found": "NotificationUser mit ID {{id}} nicht gefunden"
+    },
+    "notification-list-empty-state": {
+      "description": "Sie haben derzeit keine Benachrichtigungen"
+    },
+    "notification-menu-button": {
+      "mark-as-read": "als gelesen markieren",
+      "mark-as-unread": "als ungelesen markieren"
+    },
+    "notification-preference-channel-type": {
+      "type": {
+        "email": {
+          "description": "Email"
+        },
+        "external_chat": {
+          "description": "Externer Chat"
+        },
+        "in_app": {
+          "description": "In-App"
+        },
+        "push": {
+          "description": "Push-Benachrichtigung"
+        },
+        "sms": {
+          "description": "SMS"
+        }
+      }
+    },
+    "notification-preference-list-empty-state": {
+      "description": "Sie haben derzeit keine Einstellungen für Benachrichtigungen"
+    },
+    "notification-type-tabs": {
+      "tab": {
+        "all": "Alles",
+        "unread": "Ungelesen"
+      }
+    },
+    "notifications-panel": {
+      "title": "Benachrichtigungen"
+    },
+    "notifications-preferences-panel": {
+      "title": "Benachrichtigungseinstellungen"
+    }
+  },
+  "waipify": {
+    "ui": {
+      "You": "You",
+      "To": "To",
+      "Goal": "Goal",
+      "Scenario": "Scenario",
+      "account_settings": {
+        "account_settings": "Kontoeinstellungen",
+        "address1": "Adresse Zeile 1",
+        "address2": "Adresse Zeile 2",
+        "address": "Primär Geschäftsadresse",
+        "admin_email": "Admin E-mail",
+        "admin_first_name": "Admin Vorname",
+        "admin_last_name": "Admin Nachname",
+        "billing_settings": "Einstellungen zur Abrechnung",
+        "city": "Stadt",
+        "company_name": "Name der Kompanie",
+        "country": "Staat",
+        "delete_organisation": "Organisation löschen",
+        "delete_organisation_confirmation_text": "Sind Sie sicher, dass Sie das Konto löschen möchten? Niemand aus Ihrer Organisation wird mehr in der Lage sein, hochwertige Inhalte auf wAIpify zu erstellen. Die Geschichte von KI Generationen wird verloren gehen",
+        "departments": "Bereiche",
+        "divisions": "Abteilungen",
+        "divisions_branches": "Abteilungen/geäst",
+        "industry": "Branchentyp",
+        "industry": {
+          "accounting": "Buchhaltung",
+          "administration_office_support": "Administration & Bürounterstützung",
+          "advertising_arts_media": "Werbung, Kunst & Medien",
+          "banking_financial_services": "Bank- & Finanzdienstleistungen",
+          "call_centre_customer_service": "Callcenter & K&enservice",
+          "community_services_development": "Gemeinnützige Dienste & Entwicklung",
+          "construction": "Konstruktion",
+          "consulting_strategy": "Beratung & Strategie",
+          "design_architechture": "Design & Architektur",
+          "education_training": "Bildung & Ausbildung",
+          "engineering": "Maschinenbau",
+          "farming_animals_conservation": "Landwirtschaft, Tierhaltung & Erhaltung",
+          "government_defence": "Regierung & Verteidigung",
+          "healthcare_medical": "Gesundheitswesen & Medizin",
+          "hospitality_tourism": "Gastgewerbe & Tourismus",
+          "human_resources_recruitment": "Personalwesen & Personalbeschaffung",
+          "information_communication_technology": "Informations- & Kommunikationstechnologie",
+          "insurance": "Versicherung",
+          "legal": "Legal",
+          "manufacturing_transport_logistics": "Fertigung, Transport & Logistik",
+          "marketing_communications": "Marketing-Kommunikation",
+          "mining_resources_energy": "Bergbau, Ressourcen & Energie",
+          "other": "Andere",
+          "real_estate_property": "Immobilienunternehmen & Eigentum",
+          "retail_consumer_products": "Einzelhandel & Konsumgüter",
+          "sales": "Verkauf",
+          "science_technology": "Wissenschaft & Technologie",
+          "sport_recreation": "Sport & Freizeit",
+          "trades_services": "Handel & Dienstleistungen"
+        },
+        "invitations": "Einladungen",
+        "members": "Mitglieder",
+        "not_valid": "ungültig",
+        "one_of": "sollte eines aus der Dropdown-Liste sein",
+        "organisation_details": "Details zur Organisation",
+        "organisation_divisions": "Ihre Organisationsbereiche",
+        "organization": "Organisation",
+        "please_use_desktop_version": "For account management, Invite team members, and billing please use the desktop version",
+        "postal_code": "Postleitzahl",
+        "required": "erforderlich",
+        "save": "Speichern",
+        "state": "Land",
+        "successfully_updated": "Kontoeinstellungen erfolgreich aktualisiert",
+        "tax_id": "Wenn Sie Gewerbesteuerpflichtiger sind, geben Sie hier bitte Ihre Gewerbesteuer-ID ein",
+        "usage": {
+          "current_usage": "Aktuelle Verwendung",
+          "limit": "Limit für Probeabonnement",
+          "on_current_billing_cycle": "Die bisherige Nutzung in diesem Abrechnungszeitraum",
+          "on_trial": "Die bisherige Nutzung während des Trials",
+          "usage": "Verwendung"
+        },
+        "user": "Benutzer",
+        "user_settings": "Benutzereinstellungen",
+        "website": "Hauptwebsite der Kompanie"
+      },
+      "add-generator": {
+        "automatically-customized": "Sie werden sofort in der Lage sein, mit den fortschrittlichsten KI-Technologien hochwertige Inhalte zu erstellen",
+        "select-workspace": "Wählen Sie einen Arbeitsbereich",
+        "title": "Hinzufügen der ausgewählten AI-Generatoren zu meinem Arbeitsbereich"
+      },
+      "ai-generators": {
+        "add_to_workspace": "Zum Arbeitsbereich hinzufügen",
+        "header": "Erstellen Sie personalisierte Produktbeschreibungen, Übersetzungen, konvertieren Sie Text in Videos, verbessern Sie Bilder und vieles mehr, um Ihre Kunden zu begeistern und Kosteneinsparungen zu ermöglichen!",
+        "title": "KI-Generatoren Store",
+        "use-it-now": "Nutzen Sie es jetzt!"
+      },
+      "auth": {
+        "link-text": {
+          "imprint": "Imprint",
+          "privacy": "Datenschutzerklärung",
+          "terms": "Allgemeine Geschäftsbedingungen"
+        }
+      },
+      "bikes": {
+        "form": {
+          "age_range": {
+            "label": "Altersspanne"
+          },
+          "purchase_price": {
+            "label": "Kaufpreis"
+          }
+        }
+      },
+      "blocked_page": {
+        "message_for_admin": "Bitte kontaktieren Sie den Support für weitere Details",
+        "message_for_user": "Bitte wenden Sie sich für weitere Informationen an Ihren Administrator",
+        "title": "Ihre Organisation ist deaktiviert"
+      },
+      "general": {
+        "activate_subscription": "Aktivieren Sie Ihr Abonnement",
+        "activate_subscription_after_trial": "Aktivieren Sie Ihr Abonnement und nutzen Sie weiterhin",
+        "add_and_customize": "Hinzufügen der ausgewählten KI-Generatoren zu meinem Arbeitsbereich",
+        "add_generator": "KI-Generator hinzufügen",
+        "add_generator_to_workspace": "Hinzufügen KI-Generator zu meinem Arbeitsbereich",
+        "add_new_generator": "KI-Generator hinzufügen",
+        "add_to_my_workspace": "Zum Arbeitsbereich hinzufügen",
+        "ai-generators": "AI-Generatoren",
+        "cancel": "Abbrechen",
+        "click_to_browse": "oder klicken Sie zum Durchsuchen (max. 8 MB)",
+        "copy": "Kopieren",
+        "create_workspace": "Neuen Arbeitsbereich erstellen",
+        "delete": "Löschen",
+        "delete_generator": "Sind Sie sicher, dass Sie den ausgewählten KI-Generator löschen wollen?",
+        "delete_workspace_confirmation_text": "Are you sure you want to delete the workspace? Your team will not be able to use the generators there and the history of generation will not be accessible",
+        "delete_workspace_title": "Delete workspace",
+        "dislike_result": "Nicht liken",
+        "drag_image": "Bild hierher ziehen",
+        "edit": "Bearbeiten",
+        "failed_loading_workspace": "Arbeitsbereich kann nicht geladen werden",
+        "finish": "Beenden",
+        "from": "Aus",
+        "generate": "Generieren Sie",
+        "generating_text": "Text generieren",
+        "generating_video": "Video generieren",
+        "generation_price": "pro Nutzung, zum monatlichen Verbrauch Ihrer Organisation hinzugefügt",
+        "generator_exists": "Generator ist bereits zum Arbeitsbereich hinzugefügt",
+        "generator_not_added": "Generator wird nicht zum Arbeitsbereich hinzugefügt",
+        "generator_popularity": {
+          "heading": "Popularität",
+          "high": "Hoch",
+          "low": "Niedrig",
+          "medium": "Mittel"
+        },
+        "image_64": "JPEG, PNG / Up to 5MB / 64x64px",
+        "like_result": "Liken",
+        "next": "Nächstes",
+        "per-use": "pro Nutzung",
+        "remove": "Entfernen",
+        "request_ai_service" : "Fordern Sie KI-Dienste an",
+        "save": "Speichern",
+        "search": "Suchen",
+        "search1": "Suchen",
+        "settings": "Einstellungen",
+        "something_went_wrong": "Something went wrong",
+        "status": "Status",
+        "submit": "Einreichen",
+        "subscription_expired_member": "Kontaktieren Sie den Eigentümer Ihrer Organisation, um sie weiter zu nutzen!",
+        "take_couple_minutes": "Die Texterstellung kann einige Sekunden in Anspruch nehmen. (10 bis 20 Sekunden). Bei Videos bis zu ein paar Minuten. Es lohnt sich!",
+        "to": "Zu",
+        "trial_ended": "Ihre kostenlose Testphase ist beendet!",
+        "trial_generation_price": "Diese KI-Generation ist kostenlos",
+        "upload_logo": "Logo hochladen",
+        "validation_failed": "Überprüfung fehlgeschlagen",
+        "workspace": "Arbeitsbereich ",
+        "workspace_name": "Name des Arbeitsbereichs",
+        "workspace_settings": {
+          "added": "Mitglied zum Arbeitsbereich hinzugefügt"
+        }
+      },
+      "generators": {
+        "common": {
+          "translations": {
+            "label": "Übersetzung Sprachen",
+            "options": {
+              "de": "Deutsch",
+              "en-US": "Englisch",
+              "es": "Spanisch"
+            }
+          }
+        }
+      },
+      "history": {
+        "generated": "Generiert",
+        "header": {
+          "content_type": "Art des Inhalts",
+          "date_generated": "Erstellungsdatum",
+          "generated_by": "Generiert von",
+          "title": "Titel"
+        },
+        "title": "KI-Generationengeschichte"
+      },
+      "name_report": {
+        "name_first_report": "Benennen Sie Ihren ersten Bericht",
+        "name_required": "Der Berichtsname ist erforderlich"
+      },
+      "name_workspace": {
+        "change_name": "Sie können den Namen jederzeit ändern und weitere Arbeitsbereiche hinzufügen",
+        "congrats": "Glückwunsch!",
+        "header": "Unsere KI erleichtert Ihnen die Arbeit, indem sie Ihnen in Sekundenschnelle hochwertige, auf die Branche zugeschnittene Inhalte liefert.",
+        "name_first_workspace": "Benennen Sie Ihren ersten Arbeitsbereich",
+        "name_required": "Der Name des Arbeitsbereichs ist erforderlich"
+      },
+      "navbar": {
+        "admin360": "360 Admin",
+        "ai-library": "KI-Generatoren Store",
+        "ai-manager360": "AIManager360",
+        "locale": {
+          "options": {
+            "de": "Deutsch",
+            "en": "Englisch"
+          }
+        },
+        "logout": "Abmelden",
+        "manage_account": "Konto verwalten",
+        "my-workspaces": "Meine Arbeitsbereiche"
+      },
+      "onboarding": {
+        "access_all_generators": "Zugang zu allen unseren AI-Generatoren",
+        "create_first_report_free": "Erstellen Sie kostenlos einen ersten Bericht",
+        "free_test_requests": "5 kostenlose Testanfragen",
+        "free_trial": "Kostenlose Testphase",
+        "invite_team": "Einfaches Einladen Ihres Teams",
+        "no_credit_card": "Keine Kreditkarte erforderlich"
+      },
+      "outcome": {
+        "complete_all_settings": "Bitte füllen Sie mindestens die mit Sternchen gekennzeichneten Felder im Formular links aus und klicken Sie dann auf \"Generieren\"",
+        "text_not_generated": "Der Text ist noch nicht generiert worden.",
+        "video_not_generated": "Das Video ist noch nicht generiert worden",
+        "outcome-box": "Outcome box"
+      },
+      "pending": {
+        "invite_only": "Nur für eingeladene Gäste",
+        "thank_you": "Vielen Dank für Ihr Interesse an wAIpify! Im Moment sind wir im Einladungsmodus. Ein Mitglied unseres Teams wird sich mit Ihnen in Verbindung setzen, um Sie bei der Aktivierung Ihres Zugangs zu unseren Funktionen zu unterstützen."
+      },
+      "report": {
+        "add_new_record": "Neuen Datensatz hinzufügen",
+        "ai_enabled_solution": "KI-gestützte Lösung",
+        "business_function": "Geschäftsfunktion",
+        "chart": "Diagramm",
+        "create_new_report": "Neuen Bericht erstellen",
+        "create_report": "Bericht erstellen",
+        "department": "Abteilung",
+        "detail": "Detail",
+        "impact": "Auswirkungen",
+        "opportunity": "Gelegenheit",
+        "add_new_opportunity": "Neue Chance hinzufügen",
+        "add_more_opportunities": "Weitere opportunities hinzufügen",
+        "select_ai_enabled_solution": "Lösung auswählen",
+        "select_business_function": "Geschäftsfunktion auswählen",
+        "select_department": "Wählen Sie Abteilung aus",
+        "select_opportunity": "Gelegenheit auswählen",
+        "select_status": "Status auswählen",
+        "summary": "Zusammenfassung",
+        "summary_ai_opportunities_found": "KI <b>Gelegenheiten</b> gefunden",
+        "summary_ai_providers_compared": "KI <b>Anbieter</b> verglichen",
+        "summary_potential_annual_impact": "Potenzial jährlich <b>Auswirkungen</b> über",
+        "risk_level": "Risikostufe",
+        "best_ai_tool": "Bestes KI-Tool"
+      },
+      "sidebar": {
+        "ai-models": "KI-Modelle",
+        "ai-solutions": "KI-Lösungen",
+        "dashboard": "Armaturenbrett",
+        "document": "Dokumentieren",
+        "ecosystem": "Ökosystem",
+        "launcher": "Startprogramm",
+        "matching": "Passend",
+        "policies": "Richtlinien",
+        "reports": "Berichte",
+        "settings": "Einstellungen",
+        "use_case": "Anwendungsfall"
+      },
+      "sign_up": {
+        "email": "E-mail",
+        "email_address": "E-Mail Adresse",
+        "existing_account": "Haben Sie bereits ein Konto?",
+        "sign_in": "Anmelden",
+        "sign_up": "Registrieren",
+        "sign_up_email": "Registrieren Sie sich mit E-Mail",
+        "sign_up_google": "Registrieren mit Google"
+      },
+      "video": {
+        "video-progress": "Video-Rendering in Bearbeitung",
+        "video-subtitle": "Das gerenderte Video wird auch über den Arbeitsbereich verfügbar sein"
+      }
+    }
+  }
+}

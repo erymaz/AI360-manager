@@ -1,0 +1,53 @@
+export const styles = {
+  container: { background: "#EDEEF3", minHeight: "100vh" },
+  verticalFlex: { display: "flex", flexDirection: "column" },
+  header: {
+    display: "flex",
+    justifyContent: "space-between",
+    width: "100%",
+  },
+  titleContainer: {
+    display: "flex",
+    marginTop: "3px",
+    marginLeft: "10px",
+    cursor: "pointer",
+  },
+  title: { display: "flex", marginTop: "10px", marginLeft: "10px" },
+  searchContainer: { display: "flex", height: "40px" },
+  search: { marginTop: "0px", width: "300px" },
+  settingsIcon: {
+    border: "solid 1px #D7DBE0",
+    borderRadius: "8px",
+    marginLeft: "14px",
+  },
+  addButton: { marginLeft: "14px", width: "240px" },
+  menu: {
+    maxHeight: 200,
+    width: "330px",
+    marginTop: "-15px",
+  },
+  menuItemMembers: {
+    font: "Inter",
+    fontWeight: 400,
+    fontSize: "14px",
+    lineHeight: "20px",
+    color: "#6A7381",
+    marginTop: "-5px",
+  },
+  menuItemContainer: {
+    display: "flex",
+    flexDirection: "column",
+    margin: "5px 0px 0px 12px",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    width: "150px",
+  },
+  tick: { marginLeft: "60px", marginTop: "10px" },
+  selected: {
+    fontSize: "18px",
+    fontWeight: "bold",
+    lineHeight: "normal",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+  },
+};

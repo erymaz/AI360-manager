@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../Geogentia/.idea/Geogentia.iml" filepath="$PROJECT_DIR$/../../Geogentia/.idea/Geogentia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/app.waipify.com.iml" filepath="$PROJECT_DIR$/.idea/app.waipify.com.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../tree-trim-be/.idea/tree-trim-be.iml" filepath="$PROJECT_DIR$/../../tree-trim-be/.idea/tree-trim-be.iml" />
+    </modules>
+  </component>
+</project>
